@@ -1,0 +1,57 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #13a9f5
+  }
+
+  header{
+    text-align: center;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .container button {
+    padding: 10px;
+    margin: 24px;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: #66f1f1;
+    color: black;
+    border-radius: 30px;
+  }
+
+.container {
+    display: block;
+    margin: 80px auto;
+    text-align: center;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px 100px / 120px;
+    background-color: #9fc3f1;
+    
+  }
+
+  .wrapper {
+    padding-top: 20px;
+    border-radius: 15%;
+  }
+  
+  .card {
+    padding: 5px 5px 5px 5px;
+    border-radius: 5%;
+  }
+  
+
