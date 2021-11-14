@@ -7,35 +7,25 @@
     <title>Quiz App</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<header>
-    <h1 class="page-title">Quiz Time</h1>
-    <p>This is a timed quiz!</p>
-</header>
 <body>
-    <div class="wrapper">
-        <div class="container" class="hide">
-        <div id="answer-buttons" class="btn-grid">
-           <div class="questionCard">
-                <div id="question">Question</div>
-                <div id="answer-buttons" class="btn-grid">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
-                  </div>
-            </div>
-            </div>
+<header>
+    <div class="score">Highest Score</div>
+    <div>
+        <p class="time">Time: <span id="timer">0</span></p>
+    </div>
+</header>
+
+<div class="wrapper">
+    <div class="container">
+        <div class="card-contents">
+            <h4>Welcome to the Javascript Quiz!</h4>
+            <button id="startButton">Start!</button>
         </div>
     </div>
-<div class="controls">
-    <button id="start-btn" class="start-btn btn">Start</button>
-    <button id="next-btn" class="next-btn btn hide">Next</button>
 </div>
 
 
-
-    
-    <script src="./assets/js/script.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>    
     

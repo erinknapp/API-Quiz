@@ -1,32 +1,53 @@
-*, *::before, *::after {
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
-    background-color: #13a9f5
+    background-color: #13a9f5;
   }
 
-  header{
+header{
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #9fc3f1;
+    height: 50px;
   }
 
-  h2{
+header p {
+  color: black;
+  font-size: 30px;
+  font-weight: 100;
+  padding-right: 50px;
+  padding-top: 10px;
+}
+
+  .score {
+    text-align: left;
+    padding-left: 50px;
+    font-size: 40px;
+  }
+
+h2{
     text-align: center;
     font-size: 34px;
     font-weight: 700;
   }
 
-  .btn-grid {
+.btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 20px 0;
   }
-  
-  .container button {
+
+.container button {
     padding: 10px;
     margin: 24px;
-    cursor: pointer;
     font-size: 24px;
     background-color: #66f1f1;
     color: black;
@@ -34,24 +55,49 @@ body {
   }
 
 .container {
-    display: block;
+    display: flex;
     margin: 80px auto;
     text-align: center;
-    width: 50%;
+    width: 60%;
+    height:40%;
+    flex-wrap: wrap;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 10px 100px / 120px;
     background-color: #9fc3f1;
     
   }
 
-  .wrapper {
-    padding-top: 20px;
-    border-radius: 15%;
-  }
+
   
-  .card {
+.questionCard {
     padding: 5px 5px 5px 5px;
     border-radius: 5%;
+    justify-content: center;
   }
+
+.btn-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.start-btn {
+  justify-content: center;
+  font-size: 30px;
+  margin:auto;
+}
+
+.nextButton {
+
+  font-size: 30px;
+}
+
+#question {
+  font-size: 30px;
   
+}
+
+#answer-buttons {
+  margin:auto;
+}
 
