@@ -1,31 +1,37 @@
 //Declaration of variables needed using the getElementById method
 
-var startButton = document.querySelector (start-btn);
-var nextButton = document.querySelector (next-btn);
-var questionContainer = document.gquerySelector (questionCard);
-var questionEl = document.querySelector  (question);
-var answerEl = document.querySelector  (answer-buttons);
+var startButton = document.querySelector ("startButton");
+var nextButton = document.querySelector ("nextButton");
+var questionContainer = document.querySelector ("questionCard");
+var questionEl = document.querySelector  ("question");
+var answerEl = document.querySelector ("answer-buttons");
+var timerEl = document.querySelector ("timer");
+var optionsEl = document.querySelector("options");
+var count = 60;
+var countEl = document.querySelector("#count");
 
-//Button click events
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
-  setNextQuestion()
-})
-
+var timerId;
+var timer = 6 * 10;
+var questionIndex = 0;
 
 //Function to start game and hide start button once clicked on
 function startGame () {
-    startButton.classList.add('hide')
+    var quizEl = document.getElementById(wrapper);
+    quizEl.setAttribute("class", "cover");
+
+    questionEl.removeAttribute("class");
+
+    timerId = setInterval(timerStart, 1000);
+    timerEl.textContent = timer;
+
+    getQuestions();
+};
+
+var getQuestions = function () {
+    var questionOne = questions[questionIndex];
+
+    var titleEl = document.getElementById 
 }
-
-//Function to proceed to next question
-function setNextQuestion() {
-
-}
-
-//Function for selecting answer
-function selectAnswer () {
-
+    
 }
 

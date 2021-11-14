@@ -32,10 +32,14 @@ header p {
     font-size: 40px;
   }
 
-h2{
+h2, h4{
     text-align: center;
     font-size: 34px;
     font-weight: 700;
+  }
+
+  h4 {
+    padding-top: 20px;
   }
 
 .btn-grid {
@@ -45,29 +49,21 @@ h2{
     margin: 20px 0;
   }
 
-.container button {
+.wrapper button {
     padding: 10px;
-    margin: 24px;
+    margin: 30px 24px;
     font-size: 24px;
     background-color: #66f1f1;
     color: black;
     border-radius: 30px;
-  }
+    margin: 0 auto;
+    display: block;
+}
 
-.container {
-    display: flex;
-    margin: 80px auto;
-    text-align: center;
-    width: 60%;
-    height:40%;
-    flex-wrap: wrap;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #9fc3f1;
-    
-  }
+.cover {
+  display: none;
+}
 
-
-  
 .questionCard {
     padding: 5px 5px 5px 5px;
     border-radius: 5%;
