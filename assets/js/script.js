@@ -20,11 +20,17 @@ function startGame () {
 
     questionsEl.removeAttribute("class");
 
-    timerId = setInterval(timerStart, 1000);
-    timerEl.textContent = timer;
-
+    var timeInterval = setInterval(function() {
+while (timeInterval > 0) {
     getQuestions();
-};
+}
+    }, 1000);
+
+    //timerId = setInterval(timerStart, 1000);
+    //timerEl.textContent = timer;
+
+    
+}
 
 //pulling from questions.js
 
@@ -43,7 +49,7 @@ var getQuestions = function () {
 
         var optionsButton = document.createElement("button")
         optionsButton.setAttribute("class", "options");
-        optionsButton.setAttribute("value", options);
+        optionsButton.setAttribute("value", "options");
         optionsButton.style.color = ("skyblue");
         optionsButton.style.fontSize = "30px";
         optionsButton.style.padding = "20px";
@@ -126,9 +132,7 @@ var saveScore = function() {
 
     }
 
-
+}
 //button click to start quiz
-startBtn.onclick = startGame;
+document.getElementById('startButton').onclick = startGame;
 
-//save initials click
-submitBtn.onclick = saveScore;}

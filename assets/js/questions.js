@@ -7,7 +7,8 @@ var questions = [
         "Apples Pears Independence", 
         "Application Programming Interface", 
         "I don't know", 
-        "Applied Private Investigator"],
+        "Applied Private Investigator"
+        ],
         answer: "Application Programming Interface"
     },
     {
