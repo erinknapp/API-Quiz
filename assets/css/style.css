@@ -64,18 +64,12 @@ button {
   display: none;
 }
 
-.questionCard {
+.wrapper{
     padding: 5px 5px 5px 5px;
     border-radius: 5%;
     justify-content: center;
   }
 
-/* .btn-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-between;
-} */
 
 .startButton{
   justify-content: center;
