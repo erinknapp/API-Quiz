@@ -11,22 +11,23 @@
 <body>
 
 <header>
-    <div class="score">Highest Score</div>
+    <div id ="score" class="score">Highest Score</div>
     <div>
-        <p class="time">Time: <span id="timer">0</span></p>
+        <p id="time" class="time">Time: <span id="timer">60</span></p>
     </div>
 </header>
 
 <div id="wrapper" class="wrapper">
     <h4>Welcome to the Javascript Quiz!</h4>
     <button id="startButton" class="startButton">Start!</button>
+    <div id="questions" class="cover">
+        <h2 id="nextQuestion"></h2>
+        <div id="options" class="options"></div>
+    </div>
+    <div id="answerKey" class="hideAnswer"></div>
 </div>
 
-<div id="questions" class="cover">
-    <h2 id="nextQuestion"></h2>
-    <div id="options" class="options"></div>
-</div>
-<div id="answerKey" class="hideAnswer"></div>
+
 
 
 <script src="./assets/js/script.js"></script>
