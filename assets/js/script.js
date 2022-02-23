@@ -1,7 +1,6 @@
-//Declaration of variables needed using the querySelector method
 
-var startButton = document.querySelector ("#startButton");
-var nextButton = document.querySelector ("#extButton");
+var startButton = document.querySelector ("#start");
+var nextButton = document.querySelector ("#next");
 var questionsEl = document.querySelector  ("#questions");
 var timerEl = document.querySelector ("#timer");
 var optionsEl = document.querySelector("#options");
@@ -15,7 +14,7 @@ var questionIndex = 0;
 
 //Function to start game and hide start button once clicked on
 function startGame () {
-    var quizEl = document.getElementById("wrapper");
+    var quizEl = document.getElementById("intro");
     quizEl.setAttribute("class", "cover");
 
     questionsEl.removeAttribute("class");
