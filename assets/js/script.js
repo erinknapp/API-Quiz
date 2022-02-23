@@ -19,36 +19,24 @@ function startGame () {
 
     questionsEl.removeAttribute("class");
 
-    var timeInterval = setInterval(function() {
-while (timeInterval > 0) {
+    var timerId = setInterval(timerStart, 1000);
+    timerEl.textContent = timer;
+
     getQuestions();
-}
-    }, 1000);
 
-    //timerId = setInterval(timerStart, 1000);
-    //timerEl.textContent = timer;
-
-    
-}
-
-//pulling from questions.js
-
+//pulling from questions.js and iterating through the questions array
 var getQuestions = function () {
 
-    var questionOne = questions[questionIndex];
-
+    var firstQuestion = questions[questionIndex];
     var titleEl = document.getElementById ("nextQuestion");
-    titleEl.textContent = questionOne.title;
+    titleEl.textContent = firstQuestion.title;
     titleEl.style.fontSize = "250%";
-
     optionsEl.innerHTML = "";
-
-    //interate through array of questions and answers
     questionOne.options.forEach((options, i) =>{
 
         var optionsButton = document.createElement("button")
         optionsButton.setAttribute("class", "options");
-        optionsButton.setAttribute("value", "options");
+        optionsButton.setAttribute("value", "choice");
         optionsButton.style.color = ("skyblue");
         optionsButton.style.fontSize = "30px";
         optionsButton.style.padding = "20px";
