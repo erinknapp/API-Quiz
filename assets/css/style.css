@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #13a9f5;
+    background-color: #4406f0;
   }
 
 header{
@@ -14,7 +14,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #9fc3f1;
+    background-color:white; 
     height: 50px;
   }
 
@@ -30,13 +30,14 @@ h2, h4{
     text-align: center;
     font-size: 34px;
     font-weight: 700;
+    background-color: white;
   }
 
   h4 {
     padding-top: 20px;
   }
 
-  .score {
+.score {
     text-align: left;
     padding-left: 50px;
     font-size: 40px;
@@ -45,7 +46,7 @@ h2, h4{
 button {
     padding: 10px;
     font-size: 24px;
-    background-color: #66f1f1;
+    background-color: #09d6f1;
     color: black;
     border-radius: 30px;
     margin: auto;
@@ -65,22 +66,29 @@ button {
 }
 
 .wrapper{
-    padding: 5px 5px 5px 5px;
-    border-radius: 5%;
-    justify-content: center;
+  display: flex;
+  color: rgb(240, 247, 255);
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  font-size: larger;
   }
 
 
-.startButton{
+.start{
   justify-content: center;
   font-size: 30px;
-  margin:auto;
+
   text-align: center;
 }
 
 .nextButton {
 
   font-size: 30px;
+}
+
+.time {
+  float: right;
 }
 
 #question {
@@ -97,4 +105,38 @@ button {
   font-size: 30px;
   border: 1px black solid;
   text-align: center;
+}
+
+/* High Scores */
+#returnButton {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+#returnButton:hover {
+  background-color: coral;
+}
+
+#clear {
+  position: absolute;
+  right: 100px;
+  top: 100px;
+}
+
+#clear:hover {
+  background-color: coral;
+}
+
+.score-html {
+  color:indianred;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.highScore {
+  position:absolute;
+  top: 100px;
+  left: 100px;
+  text-decoration: none;
 }

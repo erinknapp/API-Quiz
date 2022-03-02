@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Timed API Quiz</title>
+    <title>Timed Javascript Quiz</title>
 </head>
 
 <body>
 <header>
-    <div class="highScores"><a href="highscores.html">Highest Scores!</a></div>
+    <div class="highScore"><a href="highscores.html">Highest Scores!</a></div>
     <div>
         <p class="time">Time: <span id="timer">60</span></p>
     </div>
@@ -20,7 +20,7 @@
 <div class="intro">
     <div id="intro" class="intro">
         <h4>Welcome to the Javascript Quiz!</h4>
-        <button id="startButton" class="startButton">Start!</button>
+        <button id="start" class="start">Start!</button>
     </div>
 
     <div id="questions" class="cover">
@@ -32,15 +32,16 @@
         <h2>Your final score is: <span id="score"></span></h2>
         < /hr>
         <p>Save your score!</p>
-        <p>Enter your name: <input type="text" id="name"/>
+        <p>Enter your initials: <input type="text" id="initials"/>
         <button id="submit">Submit</button>
         </p>
     </div>
 
-    <div id=""answers" class="hide-answers"></div>
+    <div id="answers" class="hideAnswer"></div>
 </div>
+
 <footer>
-    <div>%copy;2022 by Erin Knapp</div>
+    <div> %copy;2022 by Erin Knapp</div>
 </footer>
 
 
@@ -48,6 +49,7 @@
 
 <script src="./assets/js/questions.js"></script>
 <script src="./assets/js/script.js"></script>
+<scrip src="./assets/js/scores.js"></scrip>
 </body>
 </html>    
     
