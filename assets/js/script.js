@@ -1,29 +1,29 @@
 
-var startButton = document.querySelector ("#start");
-var nextButton = document.querySelector ("#next");
-var questionsEl = document.querySelector  ("#questions");
-var timerEl = document.querySelector ("#timer");
+var questionsEl = document.querySelector("#questions");
+var timerEl = document.querySelector("#timer");
+var startButton = document.querySelector("#start");
 var optionsEl = document.querySelector("#options");
+var answerKeyEl = document.querySelector("#answerKey");
 var initialsEl = document.querySelector("#initials");
-var submitEl = document.querySelector("#submit")
-var answerKeyEl = document.querySelector("#submit")
+var submitButton = document.querySelector("#submit");
 
 var timerId;
 var timer = 6 * 10;
 var questionIndex = 0;
 
 //Function to start game and hide start button once clicked on
-function startGame () {
+function startQuiz () {
     var quizEl = document.getElementById("intro");
     quizEl.setAttribute("class", "cover");
+    console.log(quizEl);
 
     questionsEl.removeAttribute("class");
 
-    var timerId = setInterval(timerStart, 1000);
+    timerId = setInterval(timerStart, 1000);
     timerEl.textContent = timer;
 
     getQuestions();
-
+}
 //pulling from questions.js and iterating through the questions array
 var getQuestions = function () {
 
@@ -32,23 +32,23 @@ var getQuestions = function () {
     titleEl.textContent = firstQuestion.title;
     titleEl.style.fontSize = "250%";
     optionsEl.innerHTML = "";
-    questionOne.options.forEach((options, i) =>{
+    firstQuestion.options.forEach((options, i) =>{
 
         var optionsButton = document.createElement("button")
         optionsButton.setAttribute("class", "options");
         optionsButton.setAttribute("value", "choice");
-        optionsButton.style.color = ("skyblue");
+        optionsButton.style.color = ("darkblue");
         optionsButton.style.fontSize = "30px";
         optionsButton.style.padding = "20px";
 
         optionsButton.textContent = i + 1 + ". " + options;
 
-        optionsButton.onclick = questionBtn;
+        optionsButton.onclick = questionButton;
         optionsEl.appendChild(optionsButton);
      });
 }
 
-var questionBtn = function() {
+var questionButton = function() {
     if(this.value !== questions[questionIndex].answer) {
         timer-=3;  //if wrong answer deduct 3 seconds
         if (timer < 0) {
@@ -61,7 +61,7 @@ var questionBtn = function() {
         answerEl.style.color = "red";
 
 
-    }else {
+    } else {
         answerKeyEl.textContent = "That's right!";
         answerKeyEl.style.color = "green";
     }
@@ -75,7 +75,7 @@ var questionBtn = function() {
     questionIndex++;
 
     //prevent negative timer values
-    if (questionIndex === questions.length){
+    if (questionIndex === questionsEl.length){
         stopQuiz();
     }else {
         getQuestions();
@@ -89,12 +89,12 @@ var stopQuiz = function() {
     var resultEl =  document.getElementById("results");
     resultEl.removeAttribute("class");
     var ScoreEl = document.getElementById("score");
-    ScoreEl.textContent = timer;
+    scoreEl.textContent = timer;
     questionsEl.setAttribute("class", "cover");
     answerKeyEl.setAttribute("class", "cover");
 }
 
-var startTimer = function() {
+var timerStart = function() {
     timer--;
     timerEl.textContent = timer;
     if (timer <=0){
@@ -104,7 +104,7 @@ var startTimer = function() {
 
 //save high score using localstorage
 var saveScore = function() {
-    var initials = intitialsEl.value.trim();
+    var initials = initialsEl.value.trim();
 
     if(initials !== ""){
         //store scores and initals in localstorage
@@ -115,11 +115,13 @@ var saveScore = function() {
             initials: initials
         };
         highScores.push(addScore);
-        window.localStorage.setItem("highscores", JSON.stringify(highscores));
+        window.localStorage.setItem("highscores", JSON.stringify(highScores));
 
     }
 
 }
 //button click to start quiz
-document.getElementById('startButton').onclick = startGame;
+startButton.onclick = startQuiz;
 
+//save initials click
+submitButton.onclick = saveScore;
