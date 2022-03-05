@@ -36,10 +36,10 @@ var getQuestions = function () {
 
         var optionsButton = document.createElement("button")
         optionsButton.setAttribute("class", "options");
-        optionsButton.setAttribute("value", "choice");
+        optionsButton.setAttribute("value", "options");
         optionsButton.style.color = ("darkblue");
-        optionsButton.style.fontSize = "30px";
-        optionsButton.style.padding = "20px";
+        optionsButton.style.fontSize = "16px";
+        optionsButton.style.padding = "10px";
 
         optionsButton.textContent = i + 1 + ". " + options;
 
@@ -58,7 +58,7 @@ var questionButton = function() {
         //wrong answer
         timerEl. textContent = timer;
         answerKeyEl.textContent = "Sorry that's not correct";
-        answerEl.style.color = "red";
+        answerKeyEl.style.color = "red";
 
 
     } else {
@@ -75,7 +75,7 @@ var questionButton = function() {
     questionIndex++;
 
     //prevent negative timer values
-    if (questionIndex === questionsEl.length){
+    if (questionIndex === questions.length){
         stopQuiz();
     }else {
         getQuestions();

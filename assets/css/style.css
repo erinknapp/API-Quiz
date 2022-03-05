@@ -9,14 +9,15 @@ body {
     background-color: #d3c7f3;
   }
 
-header{
-    text-align: center;
+header {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #d3c7f3; 
-    height: 50px;
-  }
+    flex-wrap: wrap;
+    list-style: none;
+    height: 100px;
+    padding: 25px;
+    background-color: white;
+}
 
 header p {
   color: black;
@@ -33,24 +34,25 @@ h2, h4{
     background-color: #d3c7f3;
   }
 
-  h4 {
+h4 {
     padding-top: 20px;
   }
 
-/* .score {
+.score {
     text-align: left;
     padding-left: 50px;
     font-size: 40px;
-  } */
+  }
 
 button {
     padding: 10px;
     font-size: 24px;
-    background-color: #09d6f1;
+    background-color: rgb(181, 221, 240);
     color: black;
-    border-radius: 30px;
+    border-radius: 15px;
     margin: auto;
     display: block;
+    border: thick double #32a1ce;
 }
 
 .quiz-intro {
@@ -64,11 +66,22 @@ button {
   margin: auto 0;
 }
 
-.highScore {
-  position:absolute;
-  top: 100px;
-  left: 50px;
+.quiz-intro p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.options {
+  text-align: center;
   text-decoration: none;
+  font-size: 14px;
+}
+
+.highScore {
+  position: absolute;
+  top: 30px;
+  left: 15px;
 }
 
 .highScore a {
@@ -76,12 +89,15 @@ button {
   font-size: 28px;
   border: thick double #32a1ce;
   background-color: rgb(181, 221, 240);
+  border-radius: 15px;
 }
 
 .time {
-  float: left;
-  margin-left: 50px;
-  margin-top: 20px;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  padding: 5px;
+  border-radius: 15px;
   border: thick double #32a1ce;
   text-align: center;
   background-color: rgb(181, 221, 240);
@@ -116,25 +132,26 @@ button {
   margin-top: 100px;
 }
 
-.nextButton {
+/* .nextButton {
+  text-decoration: none;
+  font-size: 28px;
+  border: thick double #32a1ce;
+  background-color: rgb(181, 221, 240);
+  border-radius: 15px;
+} */
 
-  font-size: 30px;
-}
 
-
-#question {
-  font-size: 30px;
-}
-
-#answer-buttons {
-  margin:auto;
-}
+/* #questions {
+  font-size: 28px;
+  margin-bottom: 15px;
+  
+} */
 
 #answerKey {
-  color: blue;
-  background-color: beige;
+  color: rgb(0, 0, 12);
+  background-color: rgb(253, 253, 245);
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 400;
   border: none;
   padding: 0px;
   text-align: center;
@@ -143,20 +160,38 @@ button {
 #nextQuestion {
   text-align: center;
   padding: 15px;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 15px;
-  color: blue;
+  color: black;
+}
+
+#submit {
+  text-align: center;
+  border-radius: 15px;
+  font-size: 28px;
+}
+
+#submit:hover {
+  background-color: white;
 }
 
 /* High Scores */
 #returnButton {
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 50px;
+  left: 50px;
 }
 
 #returnButton:hover {
-  background-color: coral;
+  background-color: white;
+}
+
+#results {
+  color:black;
+  text-align: center;
+  background-color: white;
+  font-size: 30px;
+  border: black solid;
 }
 
 #clear {
@@ -166,11 +201,24 @@ button {
 }
 
 #clear:hover {
-  background-color: coral;
+  background-color: white;
 }
 
 .score-html {
-  color:indianred;
+  color: white;
   font-size: 30px;
   text-decoration: none;
+}
+
+footer {
+  background-color: white;
+  text-align: center;
+  height: 100px;
+  padding: 25px;
+
+}
+
+footer div {
+  text-align: center;
+  font-size: 32px;
 }
