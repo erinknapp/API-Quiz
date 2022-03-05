@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Timed Javascript Quiz</title>
 </head>
@@ -17,9 +16,10 @@
     </div>
 </header>
 
-<div class="intro">
-    <div id="intro" class="intro">
+<div class="quiz-intro">
+    <div id="intro">
         <h4>Welcome to the Javascript Quiz!</h4>
+        <p>The timer starts at 60 seconds and 3 seconds are deducted for wrong answers. You can view the highest scores at the end!</p>
         <button id="start" class="start">Start!</button>
     </div>
 
@@ -30,20 +30,21 @@
 
     <div id="results" class="cover">
         <h2>Your final score is: <span id="score"></span></h2>
-        < /hr>
+        
         <p>Save your score!</p>
         <p>Enter your initials: <input type="text" id="initials"/>
         <button id="submit">Submit</button>
         </p>
     </div>
 
-    <div id="answers" class="hideAnswer"></div>
+    <div id="answerKey" class="hideAnswer"></div>
 </div>
 
 <footer>
-    <div> %copy;2022 by Erin Knapp</div>
+    <div>
+        &copy;2022 Erin Knapp
+    </div>
 </footer>
-
 
 
 
