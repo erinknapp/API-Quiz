@@ -88,8 +88,9 @@ var stopQuiz = function() {
     clearInterval(timerId);
     var resultEl =  document.getElementById("results");
     resultEl.removeAttribute("class");
-    var ScoreEl = document.getElementById("score");
+    var scoreEl = document.getElementById("score");
     scoreEl.textContent = timer;
+
     questionsEl.setAttribute("class", "cover");
     answerKeyEl.setAttribute("class", "cover");
 }
